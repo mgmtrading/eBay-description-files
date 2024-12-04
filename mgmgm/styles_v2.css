@@ -1,7 +1,6 @@
 .container {
     margin: auto;
     max-width: 1547px; /* Ebay's viewport limit */
-    min-width: 390px;
     width: 100%;
 }
 
@@ -17,7 +16,6 @@
     position: absolute;
     width: 100%;
     max-width: 1547px; /* Ebay's viewport limit */
-    min-width: 390px;
     top: 0;
     margin-left: -40px;
     z-index: -1;
@@ -195,6 +193,11 @@ img {
     .description__right {
         width: 100%;
     }
+
+    #de-tab:checked ~ #de-description,
+    #en-tab:checked ~ #en-description {
+        margin-top: 20px;
+    }
 }
 
 @media screen and (max-width: 560px) {
@@ -216,5 +219,43 @@ img {
         margin: 0px;
         padding: 20px 0px 0px 0px;
         width: 100%;
+    }
+
+    .body {
+        margin: 45px 5px;
+    }
+
+    .header {
+        margin-left: -20px;
+    }
+
+    .header > img {
+        height: 120px;
+        width: 120px;
+    }
+
+    #de-tab:checked ~ #de-description,
+    #en-tab:checked ~ #en-description {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .body {
+        margin: 20px 5px;
+    }
+
+    .header {
+        margin-left: -15px;
+    }
+
+    .header > img {
+        height: 80px;
+        width: 80px;
+    }
+
+    #de-tab:checked ~ #de-description,
+    #en-tab:checked ~ #en-description {
+        margin-top: 5px;
     }
 }
