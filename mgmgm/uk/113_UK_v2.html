@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mgmtrading/eBay-description-files@main/mgmgm/uk/styles_t1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
+    <title></title>
+</head>
+<body>
+    <div class="header">
+        <div class="header__logo">
+            <img src="https://cdn.jsdelivr.net/gh/mgmtrading/eBay-description-files@main/mgmgm/img/01_LOGO-19-2.jpg" alt="mgm parts logo" />
+        </div>
+        <div class="header__right-column">
+            <div class="header__text dark-text">
+                (GMT+3) 09:00 - 18:00 | From Monday to Friday | Located in Vilnius, Lithuania
+            </div>
+            <div class="header__partners">
+                <span class="header__partners-text dark-text">Our Partners:</span>
+                <img class="header__partners-logo" src="https://cdn.jsdelivr.net/gh/mgmtrading/eBay-description-files@main/mgmgm/uk/paypal_logo.png" alt="paypal logo" />
+                <img class="header__partners-logo" src="https://cdn.jsdelivr.net/gh/mgmtrading/eBay-description-files@main/mgmgm/uk/dpd_logo.png" alt="dpd logo" />
+                <img class="header__partners-logo" src="https://cdn.jsdelivr.net/gh/mgmtrading/eBay-description-files@main/mgmgm/uk/tnt_logo.png" alt="tnt logo" />
+                <img class="header__partners-logo" src="https://cdn.jsdelivr.net/gh/mgmtrading/eBay-description-files@main/mgmgm/uk/dhl_logo.png" alt="dhl logo" />
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="description">
+            <div class="description__left">
+                <div class="description__title">
+                    {{ data['title'] }}
+                </div>
+                <div class="description__info">
+                    {% if data['condition_description'] %} {{ data['condition_description'] }} {% endif %}
+                    {% if data['modification'] %} {% endif %} {% if data['year'] %} {% endif %}
+                    {% if data['manuf_code'] %} {% endif %} {% if data['engine_code'] %} {% endif %}
+                    {% if data['fuel_type'] %} {% endif %} {% if data['steering_position'] %}
+                    {% endif %} {% if data['gearbox_type'] %} {% endif %}
+                </div>
+                <div class="description__spec">
+                    <table>
+                        <tr>
+                            <td class="table-first-column">Manufacturer</td>
+                            <td>{{ data['manuf'] }}</td>
+                        </tr>
+                        <tr>
+                            <td class="table-first-column">Model</td>
+                            <td>{{ data['model'] }}</td>
+                        </tr>
+                        <tr>
+                            <td class="table-first-column">Modification</td>
+                            <td>{{ data['modification'] }}</td>
+                        </tr>
+                        <tr>
+                            <td class="table-first-column">Year of production</td>
+                            <td>{{ data['year'] }}</td>
+                        </tr>
+                        <tr>
+                            <td class="table-first-column">Manufacturer's code</td>
+                            <td>{{ data['manuf_code'] }}</td>
+                        </tr>
+                        <tr>
+                            <td class="table-first-column">Engine code</td>
+                            <td>{{ data['engine_code'] }}</td>
+                        </tr>
+                        <tr>
+                            <td class="table-first-column">Fuel type</td>
+                            <td>{{ data['fuel_type'] }}</td>
+                        </tr>
+                        <tr>
+                            <td class="table-first-column">Steering position</td>
+                            <td>{{ data['steering_position'] }}</td>
+                        </tr>
+                        <tr>
+                            <td class="table-first-column">Gearbox type</td>
+                            <td>{{ data['gearbox_type'] }}</td>
+                        </tr>
+                    </table>
+                    <div class="info__text">
+                        <div>
+                            <p>We also have more parts from this vehicle.</p>
+                            <p>If there is anything unclear or if you have any further questions -
+                                <span class="oran-text">please contact us</span>.</p>
+                            <p class="info__text--underline"><span class="oran-text">Important</span> - all
+                                parts have void stickers applied and photographed prior dispatching, DO NOT
+                                peel off any <span class="oran-text">MGM Parts</span> stickers off the part
+                                 or else you will loose all possibilities to return the item</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <dvi class="description__img">
+                <input id='pic1' type="radio" name='pics' checked />
+                <label for="pic1">
+                    <img class="product-img" src={{ data['pictures'][0] }} alt />
+                </label>
+                <input id='pic2' type="radio" name='pics' />
+                <label for="pic2">
+                    <img class="product-img" src={{ data['pictures'][1] }} alt />
+                </label>
+                <input id='pic3' type="radio" name='pics' />
+                <label for="pic3">
+                    <img class="product-img" src={{ data['pictures'][2] }} alt />
+                </label>
+                <input id='pic4' type="radio" name='pics' />
+                <label for="pic4">
+                    <img class="product-img" src={{ data['pictures'][3] }} alt />
+                </label>
+
+                <section id="bigpic1" class="description__img-main">
+                    <img src={{ data['pictures'][0] }} alt />
+                </section>
+                <section id="bigpic2" class="description__img-main">
+                    <img src={{ data['pictures'][1] }} alt />
+                </section>
+                <section id="bigpic3" class="description__img-main">
+                    <img src={{ data['pictures'][2] }} alt />
+                </section>
+                <section id="bigpic4"  class="description__img-main">
+                    <img src={{ data['pictures'][3] }} alt />
+                </section>
+            </dvi>
+        </div>
+        <div class="info">
+            <div class="info__exp">
+                <div><b>OUR LISTINGS EXPLAINED:</b></div>
+                <div>
+                    <span class="oran-text">RHD</span> refers to part from right hand drive vehicle (found in UK, Australia and others)<br/>
+                    <span class="oran-text">LHD</span> refers to part from left hand drive vehicle (found in most Europe countries, USA and others)
+                </div>
+                <div>
+                    <img src="https://cdn.jsdelivr.net/gh/mgmtrading/eBay-description-files@main/mgmgm/uk/car.png" />
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <div class="abaut__tabs">
+                <input id="tab1" type="radio" name="tabs" class="about__input" checked>
+                <label for="tab1" class="about__titles-txt">About Us</label>
+                <input id="tab2" type="radio" name="tabs" class="about__input">
+                <label for="tab2" class="about__titles-txt">Payment</label>
+                <input id="tab3" type="radio" name="tabs" class="about__input">
+                <label for="tab3" class="about__titles-txt">Shipping</label>
+                <input id="tab4" type="radio" name="tabs" class="about__input">
+                <label for="tab4" class="about__titles-txt">Feedback</label>
+                <input id="tab5" type="radio" name="tabs" class="about__input">
+                <label for="tab5" class="about__titles-txt">Returns</label>
+                <input id="tab6" type="radio" name="tabs" class="about__input">
+                <label for="tab6" class="about__titles-txt">Contact Us</label>
+                <section id="content1">
+                    <p>We are young, and highly motivated team ready to deliver excellent service for our
+                        customers. Our dismantling specialist takes care about every spare part before delivering
+                        to You.</p>
+                </section>
+                <section id="content2">
+                    <p>We accept payments via <span class="oran-text">PayPal</span> & <span class="oran-text">
+                        Bank transfer</span> (please contact us for payment details).
+                        Payment shall be always received before the purchased items are sent. If you experience
+                        system problems while making the payment - <span class="oran-text">please contact us</span>.</p>
+
+                        <p>We do not have possibility to accept Credit Card payments, but you can use <span class="oran-text">
+                        PayPal</span> to proccess credit card payment to us.</p>
+                </section>
+                <section id="content3">
+                    <p><span class="oran-text">Economy postage</span> is offered to buyers outside the EU. It is registered post office
+                        services with delivery time ranging from 1 to 4 weeks.<br/>
+                        <span class="oran-text">Standard postage</span> is offered for all buyers - delivery by DPD, DHL or TNT with informative
+                    tracking information provided. This method takes about a week for EU buyers and 1-2 weeks
+                    for worldwide transactions.<br/>
+                    <span class="oran-text">Express postage</span> option is usually offered for EU buyers and parcels will be delivered in
+                    one business day. Express delivery can be arranged for all buyers worldwide upon individual
+                    agreement.</p>
+
+                    <p>For BUYERS OUTSIDE THE EU - please consider that <span class="oran-text">Customs Import
+                        Fees</span> will be charged by your country depending on item bought and its value.
+                        Please contact your customs office for more information.</p>
+
+                    <p>We can still <span class="oran-text">Change</span> your chosen shipping method. This is usually applied to buyers from
+                        various islands and other remote areas.</p>
+                </section>
+                <section id="content4">
+                    <p>We are trying our best to provide you <span class="oran-text">carefree and uncomplicated
+                        experience</span> when shopping used car parts.</p>
+
+                    <p>If You are not satisfied with our transaction, please <span class="oran-text">contact
+                        us</span>  and we will do our best to <span class="oran-text">resolve</span> all your
+                        issues.<br/>
+                    We think that by communicating with each other we will always reach a <span class="oran-text">
+                        perfect outcome</span> of most cases.</p>
+                </section>
+                <section id="content5">
+                    <p>If you are not happy with your item please return in the original packaging and with all
+                        tags attached within 30 days. Goods must be returned carriage paid. Refund of purchase
+                        price will be refunded by the same method as the payment was made.
+                        <span class="oran-text">Postage and packaging will not be refunded</span>.</p>
+
+                    <p>If your item is faulty or we have sent you something different to what you ordered, again
+                        please return it to us within 30 days and we will give You a full refund or replacement.
+                        Including postage and packaging.</p>
+
+                    <p>Please note that we don't process refunds until the item is sent back to us. As soon as we
+                        receive our item back, we will verify the secret marking and refund you asap. Buyer must
+                        <span class="oran-text">CONTACT US</span> before returning an item. Items must be returned
+                        in an original condition and packaging. All our items are securely or visibly marked and
+                        only those will be accepted back and refunded.</p>
+                </section>
+                <section id="content6">
+                    Have any questions? Contact us directly via messages and we will answer you as soon as possible!
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="dark-text">(GMT+3) 09:00 - 18:00 | From Monday to Friday | Located in Vilnius, Lithuania</div>
+    </div>
+</body>
+</html>
